@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:id="@+id/menu_register"
+        android:title="기기등록"></item>
+    <item android:id="@+id/menu_modify"
+        android:title="기기관리"></item>
+    <item android:id="@+id/menu_info"
+        android:title="@string/menu_info"></item>
+    <item android:id="@+id/menu_logout"
+        android:title="@string/menu_logout"></item>
+</menu>

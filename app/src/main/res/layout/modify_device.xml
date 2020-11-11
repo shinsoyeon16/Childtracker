@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".ModifyDevice">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="기기 관리"
+            android:textSize="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <ImageButton
+                android:id="@+id/modify_btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#3BFAFAFA"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/modify_et_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:enabled="false"
+            android:hint="기기 시리얼 번호"
+            android:maxLength="19"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/modify_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="false"
+            android:hint="기기 별칭"
+            android:privateImeOptions="defaultInputmode=korean"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modify_btn_modify"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="수정" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/modify_btn_clearData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기록 초기화" />
+
+                <Button
+                    android:id="@+id/modify_btn_unRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="연동 해제" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/modify_lv"
+        />
+</LinearLayout>
