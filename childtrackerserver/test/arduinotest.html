@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+var a, b;
+function getLocation() {
+  if (navigator.geolocation) { // GPS를 지원하면
+    navigator.geolocation.getCurrentPosition(function(position) {
+    	a = position.coords.latitude;
+  		b = position.coords.longitude;
+      //alert(a + ' ' + b);
+      document.getElementById('i1').value = a;
+      document.getElementById('i2').value = b;	
+    }, function(error) {
+      console.error(error);
+    }, {
+      enableHighAccuracy: false,
+      maximumAge: 0,
+      timeout: Infinity
+    });
+  
+  } else {
+    alert('GPS를 지원하지 않습니다');
+  }
+  
+}
+getLocation();
+</script>
+<form name="formname" method="get" action="writedata.php">
+	<select name="device_serial_number" default="1">
+		<option value="0000-0000-0000-0001">0000-0000-0000-0001</option>
+		<option value="0000-0000-0000-0002">0000-0000-0000-0002</option>
+		<option value="0000-0000-0000-0003">0000-0000-0000-0003</option>
+		<option value="0000-0000-0000-0004">0000-0000-0000-0004</option>
+		<option value="0000-0000-0000-0005">0000-0000-0000-0005</option>
+		<option value="0000-0000-0000-0006">0000-0000-0000-0006</option>
+		<option value="0000-0000-0000-0007">0000-0000-0000-0007</option>
+		<option value="0000-0000-0000-0008">0000-0000-0000-0008</option>
+		<option value="0000-0000-0000-0009">0000-0000-0000-0009</option>
+		<option value="0000-0000-0000-0010">0000-0000-0000-0010</option>
+		<option value="0000-0000-0000-0011">0000-0000-0000-0011</option>
+		<option value="0000-0000-0000-0012">0000-0000-0000-0012</option>
+		<option value="0000-0000-0000-0013">0000-0000-0000-0013</option>
+		<option value="0000-0000-0000-0014">0000-0000-0000-0014</option>
+		<option value="0000-0000-0000-0015">0000-0000-0000-0015</option>
+		<option value="0000-0000-0000-0016">0000-0000-0000-0016</option>
+		<option value="0000-0000-0000-0017">0000-0000-0000-0017</option>
+		<option value="0000-0000-0000-0018">0000-0000-0000-0018</option>
+		<option value="0000-0000-0000-0019">0000-0000-0000-0019</option>
+		<option value="0000-0000-0000-0020">0000-0000-0000-0020</option>
+	</select>
+	
+		<input id="i1" name="latitude" type="text" value=""/>
+		<input id="i2" name="longitude" type="text" value=""/>
+	<input type="submit"/>
+</form>
+</body>
+</html>
